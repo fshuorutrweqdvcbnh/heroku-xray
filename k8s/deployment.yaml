@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: yoit
+  name: bore
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: yoit
+      app: bore
   template:
     metadata:
       labels:
-        app: yoit
+        app: bore
     spec:
       containers:
-      - image: okteto.dev/yoit:latest
-        name: yoit
+      - image: okteto.dev/bore:latest
+        name: bore
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "mp3-juice.com"
+          value: "www.jamendo.com"
         - name: Vless_UUID
-          value: "c808c3f3-1149-4f5c-915f-f305514eb96e"
+          value: "3cbd6530-ea59-406f-83cb-66ff0c3c8bf8"
         - name: Vless_Path
-          value: "/HqaGY6"
+          value: "/hkolper"
         - name: Vmess_UUID
-          value: "c808c3f3-1149-4f5c-915f-f305514eb96e"
+          value: "3cbd6530-ea59-406f-83cb-66ff0c3c8bf8"
         - name: Vmess_Path
-          value: "/oped7ty"
+          value: "/fvDFGM"
         - name: Share_Path
-          value: "/Share267"
+          value: "/Share310"
