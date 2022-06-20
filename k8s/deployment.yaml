@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bore
+  name: haru
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: bore
+      app: haru
   template:
     metadata:
       labels:
-        app: bore
+        app: haru
     spec:
       containers:
-      - image: okteto.dev/bore:latest
-        name: bore
+      - image: okteto.dev/haru:latest
+        name: haru
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "www.jamendo.com"
+          value: "animefrenzy.net"
         - name: Vless_UUID
-          value: "3cbd6530-ea59-406f-83cb-66ff0c3c8bf8"
+          value: "4860981a-ff88-4357-ae85-8526373c36ee"
         - name: Vless_Path
-          value: "/hkolper"
+          value: "/WCdt6u9"
         - name: Vmess_UUID
-          value: "3cbd6530-ea59-406f-83cb-66ff0c3c8bf8"
+          value: "4860981a-ff88-4357-ae85-8526373c36ee"
         - name: Vmess_Path
-          value: "/fvDFGM"
+          value: "/gbFer8u"
         - name: Share_Path
-          value: "/Share310"
+          value: "/Share426"
