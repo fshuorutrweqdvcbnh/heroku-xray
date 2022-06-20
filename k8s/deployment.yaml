@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: haru
+  name: preit
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: haru
+      app: preit
   template:
     metadata:
       labels:
-        app: haru
+        app: preit
     spec:
       containers:
-      - image: okteto.dev/haru:latest
-        name: haru
+      - image: okteto.dev/preit:latest
+        name: preit
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "animefrenzy.net"
+          value: "www.azmovies.net"
         - name: Vless_UUID
-          value: "4860981a-ff88-4357-ae85-8526373c36ee"
+          value: "92dcc623-9d38-42bd-91c0-6f50ac51fdd6"
         - name: Vless_Path
-          value: "/WCdt6u9"
+          value: "/NPF435ry"
         - name: Vmess_UUID
-          value: "4860981a-ff88-4357-ae85-8526373c36ee"
+          value: "92dcc623-9d38-42bd-91c0-6f50ac51fdd6"
         - name: Vmess_Path
-          value: "/gbFer8u"
+          value: "/gu94dsf"
         - name: Share_Path
-          value: "/Share426"
+          value: "/Share581"
