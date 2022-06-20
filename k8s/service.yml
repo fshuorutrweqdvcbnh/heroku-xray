@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: head
+  name: yoit
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "head"
+  - name: "yoit"
     port: 8080
   selector:
-    app: head
+    app: yoit
